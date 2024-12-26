@@ -13,7 +13,7 @@ export const IncrementingButton = ({
 }: IncrementingButtonProps) => {
   const clickHandler = () => {
     onClick(label + 1);
-  }
+  };
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";
@@ -31,7 +31,6 @@ export const IncrementingButton = ({
     </button>
   );
 };
-
 
 export interface IncrementingButtonProps {
   /** Is this the principal call to action on the page? */
