@@ -10,7 +10,7 @@ const IncrementorButton = ({count, setCount}) => (
 )
 
 const BasicUsage = {
-    decorators: [makeStateDecorator("onClick", "count")],
+    decorators: [controlledDecorator("onClick", "count")],
 }
 ```
 See the [Storybook](https://main--676de7925ca7e0feeaaad251.chromatic.com) for more examples

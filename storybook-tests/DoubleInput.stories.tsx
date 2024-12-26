@@ -1,9 +1,9 @@
 import { DoubleInput, DoubleInputProps } from "./DoubleInput";
 
-import { makeStateDecorator } from "../src";
+import { controlledDecorator } from "../src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const stateDecorator = makeStateDecorator<DoubleInputProps>(
+const stateDecorator = controlledDecorator<DoubleInputProps>(
   "onChange",
   ["inputOne", "inputTwo"]
 );
@@ -31,7 +31,7 @@ export const Primary: Story = {
     docs: {
       source: {
         code: `
-  const stateDecorator = makeStateDecorator<DoubleInputProps>(
+  const stateDecorator = controlledDecorator<DoubleInputProps>(
   "onChange",
   ["inputOne", "inputTwo"]
   );

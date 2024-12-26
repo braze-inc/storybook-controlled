@@ -8,18 +8,18 @@ type KeysMatching<T, V> = {
 }[keyof T];
 
 /**
- * makeStateDecorator
+ * controlledDecorator
  * @param callbackName A key on props whose value is a callback
  * @param propSetter One of three options:
  * 1. A key on props whose value will be updated with the first argument of the callback
  * 2. An array of keys on props whose values will be updated with the first n arguments of the callback
  * 3. A function that will return an object to be merged with the props
  * @returns A decorator that will update the controls with the new state
- * @example If a component has currentPage and setPage: `const decorator = makeStateDecorator<MyProps>("setPage", "currentPage")`
- * @example If a component has currentPage, and totalPages and setPage's type is `(currentPage, totalPages) => void`: `const decorator = makeStateDecorator<MyProps>("setPage", ["currentPage", "totalPages"])`
- * @example If a component has a complex callback: `const decorator = makeStateDecorator<MyProps>("setPage", (obj) => ({ myProp: obj.myProp }))`
+ * @example If a component has currentPage and setPage: `const decorator = controlledDecorator<MyProps>("setPage", "currentPage")`
+ * @example If a component has currentPage, and totalPages and setPage's type is `(currentPage, totalPages) => void`: `const decorator = controlledDecorator<MyProps>("setPage", ["currentPage", "totalPages"])`
+ * @example If a component has a complex callback: `const decorator = controlledDecorator<MyProps>("setPage", (obj) => ({ myProp: obj.myProp }))`
  */
-export const makeStateDecorator = <
+export const controlledDecorator = <
   TArgs extends Args = Args,
   CallbackName extends KeysMatching<
     TArgs,

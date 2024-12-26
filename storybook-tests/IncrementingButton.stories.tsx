@@ -3,10 +3,10 @@ import {
   IncrementingButtonProps,
 } from "./IncrementingButton";
 
-import { makeStateDecorator } from "../src";
+import { controlledDecorator } from "../src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const stateDecorator = makeStateDecorator<IncrementingButtonProps>(
+const stateDecorator = controlledDecorator<IncrementingButtonProps>(
   "onClick",
   "label"
 );
@@ -38,7 +38,7 @@ export const Primary: Story = {
     docs: {
       source: {
         code: `
-const stateDecorator = makeStateDecorator<IncrementingButtonProps>(
+const stateDecorator = controlledDecorator<IncrementingButtonProps>(
   "onClick",
   "label"
 );

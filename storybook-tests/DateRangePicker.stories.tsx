@@ -1,6 +1,6 @@
 import { DateRangePicker } from "react-date-range";
 
-import { makeStateDecorator } from "../src";
+import { controlledDecorator } from "../src";
 import { Meta, StoryObj } from "@storybook/react";
 
 interface DateRange {
@@ -14,7 +14,7 @@ type DateRangePickerProps = {
   ranges: DateRange[];
 }
 
-const stateDecorator = makeStateDecorator<DateRangePickerProps>(
+const stateDecorator = controlledDecorator<DateRangePickerProps>(
   "onChange",
   ({ selection }) => ({ ranges: [selection] })
 );
@@ -45,7 +45,7 @@ export const Primary: Story = {
     docs: {
       source: {
         code: `
-const stateDecorator = makeStateDecorator<DateRangePickerProps>(
+const stateDecorator = controlledDecorator<DateRangePickerProps>(
   "onChange",
   ({selection}) => ({ranges: [selection]})
 );
