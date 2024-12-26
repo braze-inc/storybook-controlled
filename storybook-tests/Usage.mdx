@@ -1,6 +1,6 @@
 import Readme from '../README.md?raw';
 
-import { Meta, Canvas, Description, Source, Markdown } from "@storybook/blocks";
+import { Meta, Canvas, Description, Controls, Markdown } from "@storybook/blocks";
 
 import * as ButtonStories from './IncrementingButton.stories';
 import * as DatePickerStories from './DateRangePicker.stories';
@@ -13,11 +13,15 @@ import * as DoubleInputStories from './DoubleInput.stories';
 ## Single Parameter
 <Description of={ButtonStories.Primary} />
 <Canvas of={ButtonStories.Primary} />
+<Controls of={ButtonStories.Primary} />
 
 ## Multiple Parameters
 <Description of={DoubleInputStories.Primary} />
 <Canvas of={DoubleInputStories.Primary} />
+<Controls of={DoubleInputStories.Primary} />
 
 ## Complex Parameters
 <Description of={DatePickerStories.Primary} />
 <Canvas of={DatePickerStories.Primary} />
+<Controls of={DatePickerStories.Primary} />
+
