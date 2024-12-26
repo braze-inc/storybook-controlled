@@ -1,7 +1,7 @@
-# storybook-controlled
-A simple utility for connecting controlled components to storybook actions, controls and state
+# Storybook Controlled
+A simple utility for connecting controlled components to storybook actions, tests, controls and state
 
-## Usage
+## tl;dr Usage
 ```tsx
 const IncrementorButton = ({count, setCount}) => (
     <button onClick={() => setCount(count+1)}>
@@ -15,25 +15,29 @@ const BasicUsage = {
 ```
 
 ## Overview
-storybook-controlled is a powerful utility designed to enhance the testing of controlled components in Storybook. It simplifies the process of managing state and actions, allowing developers to create interactive stories that respond to user input seamlessly.
+storybook-controlled is meant to be the go-to best practice for writing stories for controlled components in Storybook. It simplifies the process of managing state and actions, allowing developers to create interactive stories that respond to user input seamlessly.
+
 
 ## Problem Statement
-Testing controlled components often involves passing a callback and a state value, which can lead to challenges in ensuring that user interactions are accurately reflected in the Storybook interface. While Storybook provides features like Actions, Render functions, and Controls, they often fall short in creating a fully interactive experience where state changes are synchronized with user actions.
+Controlled components often take a value or set of values to display and a callback to update those values. They leave it up to implementers to implement the onChange function and update the passed values. This creates extra flexibility, but causes some issues when it comes to testing.
+
+There are generally two approaches to writing stories for controlled components:
+1. write a render function with useState to handle the updates
+2. use Storybook's actions/test `action()/fn()` to mock the callback
+
+These each have drawbacks. Custom render functions generally break at least some controls, in this case the best case is that the non-functional args are omitted, but often they just don't work. Using storybooks mocks is nice, but you don't get to see the component change in response to user action. 
 
 ## Solution
-This package introduces a custom Decorator that streamlines the integration of state management with Storybook's Controls and Actions. By providing a simple interface, the Decorator takes the name of the callback and the state to update as arguments. When applied, it:
+This package introduces a custom Decorator that streamlines the integration between args and callback mocking. By providing a simple interface, the Decorator takes the name of the callback and the state to update as arguments. When applied, it:
 
 - Records the actions triggered by the callback
 - Connects directly to Storybook Controls, allowing users to manipulate component state
 - Ensures that any changes to state are reflected in real-time within the story
 
-Built with TypeScript, the Storybook State Decorator offers strong typing to prevent common errors, making it easier for developers to implement and use.
+The strong TypeScript types prevent common errors, making it easier for developers to implement and use.
 
-## Key Features
+## TODOs
 
-- Easy integration with existing Storybook stories.
-- Real-time synchronization of state changes and user actions.
-- Type-safe implementation to enhance developer experience.
-
-Elevate your Storybook stories with the Storybook State Decorator and create more dynamic, interactive components with ease!
-
+- [ ] improve source code mapping
+- [ ] publish storybook
+- [ ] allow passing component rather than Prop type
