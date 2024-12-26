@@ -1,6 +1,6 @@
 {
   "name": "storybook-controlled",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "yarn@4.5.3",
   "description": "A simple utility for connecting controlled components to storybook actions, controls and state",
   "author": {
