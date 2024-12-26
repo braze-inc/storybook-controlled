@@ -13,6 +13,7 @@ const BasicUsage = {
     decorators: [makeStateDecorator("onClick", "count")],
 }
 ```
+See the [Storybook](https://main--676de7925ca7e0feeaaad251.chromatic.com) for more examples
 
 ## Overview
 storybook-controlled is meant to be the go-to best practice for writing stories for controlled components in Storybook. It simplifies the process of managing state and actions, allowing developers to create interactive stories that respond to user input seamlessly.
