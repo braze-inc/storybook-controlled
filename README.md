@@ -41,3 +41,4 @@ The strong TypeScript types prevent common errors, making it easier for develope
 - [ ] improve source code mapping
 - [ ] publish storybook
 - [ ] allow passing component rather than Prop type
+- [ ] add automated tests
