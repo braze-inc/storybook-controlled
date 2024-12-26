@@ -154,7 +154,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.21.0":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -1306,16 +1306,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-date-range@npm:^1.4.9":
-  version: 1.4.9
-  resolution: "@types/react-date-range@npm:1.4.9"
-  dependencies:
-    "@types/react": "npm:*"
-    date-fns: "npm:^2.16.1"
-  checksum: 10c0/f4d90855dd91f84c0dfa5eda30a501851a987035af9a5dd89903f2cc38720e3aea1e10ecaa4c4324f6516d0b5581fe40ac5218e85f5ad50aabee3b4e92e84478
-  languageName: node
-  linkType: hard
-
 "@types/react-dom@npm:^19":
   version: 19.0.2
   resolution: "@types/react-dom@npm:19.0.2"
@@ -1325,7 +1315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^19.0.2":
+"@types/react@npm:^19.0.2":
   version: 19.0.2
   resolution: "@types/react@npm:19.0.2"
   dependencies:
@@ -2120,15 +2110,6 @@ __metadata:
     es-errors: "npm:^1.3.0"
     is-data-view: "npm:^1.0.1"
   checksum: 10c0/fa7aa40078025b7810dcffc16df02c480573b7b53ef1205aa6a61533011005c1890e5ba17018c692ce7c900212b547262d33279fde801ad9843edc0863bf78c4
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.16.1":
-  version: 2.30.0
-  resolution: "date-fns@npm:2.30.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.21.0"
-  checksum: 10c0/e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
   languageName: node
   linkType: hard
 
@@ -5109,7 +5090,6 @@ __metadata:
     "@storybook/test": "npm:^8.4.7"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:^19.0.2"
-    "@types/react-date-range": "npm:^1.4.9"
     "@types/react-dom": "npm:^19"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.17.0"
