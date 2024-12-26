@@ -62,6 +62,9 @@ export const makeStateDecorator = <
       [setArgs]
     );
 
-    return <Story args={{ ...args, [callbackName]: fn(callback) }} />;
+    const mock = fn(callback);
+    mock.mockName(callbackName.toString());
+
+    return <Story args={{ ...args, [callbackName]: mock }} />;
   } satisfies Decorator<TArgs>;
 };

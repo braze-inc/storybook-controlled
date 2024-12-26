@@ -1,11 +1,16 @@
-import { IncrementingButton, IncrementingButtonProps } from "./IncrementingButton";
+import {
+  IncrementingButton,
+  IncrementingButtonProps,
+} from "./IncrementingButton";
 
 import { makeStateDecorator } from "../src";
 import { Meta, StoryObj } from "@storybook/react";
 
-const stateDecorator = makeStateDecorator<IncrementingButtonProps>("onClick", "label");
+const stateDecorator = makeStateDecorator<IncrementingButtonProps>(
+  "onClick",
+  "label"
+);
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
   component: IncrementingButton,
   parameters: {
@@ -14,14 +19,37 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
   },
+  args: {
+    primary: true,
+    label: 1,
+  },
   decorators: [stateDecorator],
 } satisfies Meta<IncrementingButtonProps>;
 
 type Story = StoryObj<IncrementingButtonProps>;
 
+/**
+ * This is a simple button that increments a number when clicked.
+ * You'll notice that the args change when you click the button.
+ * You'll also notice that clicking the button also generates an action.
+ */
 export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 1,
+  parameters: {
+    docs: {
+      source: {
+        code: `
+const stateDecorator = makeStateDecorator<IncrementingButtonProps>(
+  "onClick",
+  "label"
+);
+
+export default {
+  decorators: [stateDecorator],
+  ...
+}
+`,
+        type: "code",
+      },
+    },
   },
 };

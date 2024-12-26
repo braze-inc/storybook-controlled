@@ -1,0 +1,16 @@
+import { Meta, Canvas, Description, Source } from "@storybook/blocks";
+
+import * as ButtonStories from './IncrementingButton.stories';
+
+<Meta title="Usage" />
+
+# Storybook Controlled
+The primary idea of this library is to codify a best practice for writing stories for controlled components.
+The decorator it exposes connects a callback to a piece or pieces of state.
+It then hooks into Storybooks testing, actions, and args hooks to update the state when the callback is called.
+
+## Single Callback, Single Parameter
+<Description of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Primary} />
+
+## Single Callback, Multiple Parameters
