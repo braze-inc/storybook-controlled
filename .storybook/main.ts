@@ -24,10 +24,11 @@ const config = {
     options: {},
   },
   async viteFinal(config) {
-    return {
-      ...config,
-      assetsInclude: [...config.assetsInclude as string[], "README.md"],
-    };
+    const { mergeConfig } = await import('vite');
+
+    return mergeConfig(config, {
+      assetsInclude: [ "README.md"],
+    });
   },
 } satisfies StorybookConfig;
 export default config;

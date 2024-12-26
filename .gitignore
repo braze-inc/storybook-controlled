@@ -13,6 +13,7 @@
 .pnp.*
 
 *storybook.log
+storybook-static/*
 
 # Logs
 logs

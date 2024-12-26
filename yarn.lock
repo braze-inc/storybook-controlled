@@ -1956,7 +1956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^11.15.0":
+"chromatic@npm:^11.15.0, chromatic@npm:^11.20.2":
   version: 11.20.2
   resolution: "chromatic@npm:11.20.2"
   peerDependencies:
@@ -5091,6 +5091,7 @@ __metadata:
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:^19.0.2"
     "@types/react-dom": "npm:^19"
+    chromatic: "npm:^11.20.2"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.17.0"
     eslint-plugin-react: "npm:^7.37.2"

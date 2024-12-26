@@ -1,11 +1,12 @@
 {
   "name": "storybook-controlled",
+  "version": "0.0.1",
   "packageManager": "yarn@4.5.3",
   "description": "A simple utility for connecting controlled components to storybook actions, controls and state",
   "author": "Chris Garber <christophermgarber@gmail.com>",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/braze/storybook-controlled",
+    "url": "git+https://github.com/braze/storybook-controlled.git",
     "type": "git"
   },
   "homepage": "https://github.com/braze/storybook-controlled",
@@ -27,6 +28,9 @@
       "import": "./build/index.mjs"
     }
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@storybook/addon-actions": "^8.4.7",
     "@storybook/preview-api": "^8.4.7",
@@ -48,6 +52,7 @@
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19",
+    "chromatic": "^11.20.2",
     "date-fns": "^4.1.0",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
