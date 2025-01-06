@@ -10,9 +10,9 @@ interface DateRange {
 }
 
 type DateRangePickerProps = {
-  onChange: (ranges: {selection: DateRange}) => void;
+  onChange: (ranges: { selection: DateRange }) => void;
   ranges: DateRange[];
-}
+};
 
 const stateDecorator = controlledDecorator<DateRangePickerProps>(
   "onChange",
@@ -25,7 +25,13 @@ export default {
     layout: "centered",
   },
   args: {
-    ranges: [{ startDate: new Date(1714383846000), endDate: new Date(1714483846000), key: "selection" }],
+    ranges: [
+      {
+        startDate: new Date(1714383846000),
+        endDate: new Date(1714483846000),
+        key: "selection",
+      },
+    ],
     showSelectionPreview: true,
     moveRangeOnFirstSelection: false,
     months: 2,
