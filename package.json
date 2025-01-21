@@ -23,14 +23,14 @@
     "plugin",
     "decorator"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./build/index.d.ts",
-      "require": "./build/index.js",
-      "import": "./build/index.mjs"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
